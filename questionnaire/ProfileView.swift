@@ -12,6 +12,8 @@ struct ProfileView: View {
     
     @State private var GivenName: String = ""
     @State private var yourAge: String = ""
+    @State private var yourHeight: String = ""
+    @State private var yourWeight: String = ""
 
 
     var body: some View {
@@ -20,14 +22,29 @@ struct ProfileView: View {
                 "Enter your name",
                 text: $GivenName
             )
+            Spacer()
             .disableAutocorrection(true)
             TextField(
                 "Enter your age",
                 text: $yourAge
             )
+            Spacer()
             .disableAutocorrection(true)
+            TextField(
+                "Enter your height",
+                text: $yourHeight
+            )
+            .disableAutocorrection(true)
+            Spacer()
+            TextField(
+                "Enter your weight",
+                text: $yourWeight
+            )
+            .disableAutocorrection(true)
+            Spacer()
         }
         .textFieldStyle(.roundedBorder)
+        
     }
 
     
