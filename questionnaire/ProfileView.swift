@@ -10,20 +10,20 @@ import SwiftUI
 struct ProfileView: View {
     @State private var name: String = ""
     
-    @State private var givenName: String = ""
-    @State private var familyName: String = ""
+    @State private var GivenName: String = ""
+    @State private var yourAge: String = ""
 
 
     var body: some View {
         VStack {
             TextField(
                 "Enter your name",
-                text: $givenName
+                text: $GivenName
             )
             .disableAutocorrection(true)
             TextField(
                 "Enter your age",
-                text: $familyName
+                text: $yourAge
             )
             .disableAutocorrection(true)
         }
