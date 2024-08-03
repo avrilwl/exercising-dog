@@ -18,30 +18,68 @@ struct ProfileView: View {
 
     var body: some View {
         VStack {
-            TextField(
-                "Enter your name",
-                text: $GivenName
-            )
-            Spacer()
+//            TextField(
+//                "Enter your name",
+//                text: $GivenName
+//
+//            )
+//        
+//            Spacer()
+//            .disableAutocorrection(true)
+//            TextField(
+//                "Enter your age",
+//                text: $yourAge
+//                
+//            )
+//            Spacer()
+//            .disableAutocorrection(true)
+//            TextField(
+//                "Enter your height",
+//                text: $yourHeight
+//            )
+            TextField("Your Name", text: self.$GivenName)
+                .frame(height: 55)
+                   .textFieldStyle(PlainTextFieldStyle())
+                   .padding([.horizontal], 4)
+                   .cornerRadius(16)
+                   .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
+                   .padding([.horizontal], 24)
             .disableAutocorrection(true)
-            TextField(
-                "Enter your age",
-                text: $yourAge
-            )
             Spacer()
-            .disableAutocorrection(true)
-            TextField(
-                "Enter your height",
-                text: $yourHeight
-            )
+            TextField("Your Height", text: self.$yourHeight)
+                .frame(height: 55)
+                   .textFieldStyle(PlainTextFieldStyle())
+                   .padding([.horizontal], 4)
+                   .cornerRadius(16)
+                   .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
+                   .padding([.horizontal], 24)
             .disableAutocorrection(true)
             Spacer()
-            TextField(
-                "Enter your weight",
-                text: $yourWeight
-            )
+            TextField("Your weight", text: self.$yourWeight)
+                .frame(height: 55)
+                   .textFieldStyle(PlainTextFieldStyle())
+                   .padding([.horizontal], 4)
+                   .cornerRadius(16)
+                   .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
+                   .padding([.horizontal], 24)
             .disableAutocorrection(true)
             Spacer()
+            TextField("Your age", text: self.$yourAge)
+                .frame(height: 55)
+                   .textFieldStyle(PlainTextFieldStyle())
+                   .padding([.horizontal], 4)
+                   .cornerRadius(16)
+                   .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
+                   .padding([.horizontal], 24)
+            .disableAutocorrection(true)
+            Spacer()
+//            Spacer()
+//            TextField(
+//                "Enter your weight",
+//                text: $yourWeight
+//            )
+//            .disableAutocorrection(true)
+//            Spacer()
         }
         .textFieldStyle(.roundedBorder)
         
