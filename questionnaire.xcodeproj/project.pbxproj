@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3132E2EB2C54DFE8001F82C4 /* avril.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3132E2EA2C54DFE8001F82C4 /* avril.swift */; };
 		319C823D2C4B83A200CD0277 /* questionnaireApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319C823C2C4B83A200CD0277 /* questionnaireApp.swift */; };
 		319C823F2C4B83A200CD0277 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319C823E2C4B83A200CD0277 /* ContentView.swift */; };
 		319C82412C4B845000CD0277 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 319C82402C4B845000CD0277 /* Assets.xcassets */; };
@@ -21,6 +22,8 @@
 		319C82732C4B8F8000CD0277 /* MyPlanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319C82722C4B8F8000CD0277 /* MyPlanView.swift */; };
 		319C82752C4B904900CD0277 /* WorkoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319C82742C4B904900CD0277 /* WorkoutView.swift */; };
 		319C82772C4B907200CD0277 /* RunningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 319C82762C4B907200CD0277 /* RunningView.swift */; };
+		31F9929D2C5E008E008F141E /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F9929C2C5E008E008F141E /* QuestionView.swift */; };
+		31F9929F2C5E009D008F141E /* NextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F9929E2C5E009D008F141E /* NextButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3132E2EA2C54DFE8001F82C4 /* avril.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avril.swift; sourceTree = "<group>"; };
 		319C82392C4B83A200CD0277 /* questionnaire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = questionnaire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		319C823C2C4B83A200CD0277 /* questionnaireApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionnaireApp.swift; sourceTree = "<group>"; };
 		319C823E2C4B83A200CD0277 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +62,8 @@
 		319C82722C4B8F8000CD0277 /* MyPlanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPlanView.swift; sourceTree = "<group>"; };
 		319C82742C4B904900CD0277 /* WorkoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutView.swift; sourceTree = "<group>"; };
 		319C82762C4B907200CD0277 /* RunningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningView.swift; sourceTree = "<group>"; };
+		31F9929C2C5E008E008F141E /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		31F9929E2C5E009D008F141E /* NextButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +120,9 @@
 				319C82702C4B8F3700CD0277 /* HomePageView.swift */,
 				319C826A2C4B8E5700CD0277 /* ProfileView.swift */,
 				319C826C2C4B8E8400CD0277 /* QuestionnaireView.swift */,
+				31F9929C2C5E008E008F141E /* QuestionView.swift */,
+				31F9929E2C5E009D008F141E /* NextButton.swift */,
+				3132E2EA2C54DFE8001F82C4 /* avril.swift */,
 				319C826E2C4B8EF600CD0277 /* ChoosePlanView.swift */,
 				319C82722C4B8F8000CD0277 /* MyPlanView.swift */,
 				319C82742C4B904900CD0277 /* WorkoutView.swift */,
@@ -280,10 +289,13 @@
 			files = (
 				319C826B2C4B8E5700CD0277 /* ProfileView.swift in Sources */,
 				319C823F2C4B83A200CD0277 /* ContentView.swift in Sources */,
+				3132E2EB2C54DFE8001F82C4 /* avril.swift in Sources */,
 				319C82752C4B904900CD0277 /* WorkoutView.swift in Sources */,
 				319C826D2C4B8E8400CD0277 /* QuestionnaireView.swift in Sources */,
 				319C82732C4B8F8000CD0277 /* MyPlanView.swift in Sources */,
+				31F9929F2C5E009D008F141E /* NextButton.swift in Sources */,
 				319C826F2C4B8EF600CD0277 /* ChoosePlanView.swift in Sources */,
+				31F9929D2C5E008E008F141E /* QuestionView.swift in Sources */,
 				319C82712C4B8F3700CD0277 /* HomePageView.swift in Sources */,
 				319C82772C4B907200CD0277 /* RunningView.swift in Sources */,
 				319C823D2C4B83A200CD0277 /* questionnaireApp.swift in Sources */,
