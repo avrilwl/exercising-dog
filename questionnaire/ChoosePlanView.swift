@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ChoosePlanView: View {
 
+    @State private var isFullScreenPresented = false
     
     var body: some View {
         ZStack {
@@ -19,7 +20,7 @@ struct ChoosePlanView: View {
                     .font(.largeTitle)
                 
                 Button(action: {
-                    MyPlanView()
+                        isFullScreenPresented = true
                 }) {
                     Text("7 day workout plan")
                         .frame(width: 350, height: 50)
@@ -33,7 +34,7 @@ struct ChoosePlanView: View {
                         )
                 }
                 Button(action: {
-                    MyPlanView()
+                    isFullScreenPresented = true
                 }) {
                     Text("30 day workout plan")
                         .frame(width: 350, height: 50)
@@ -47,7 +48,7 @@ struct ChoosePlanView: View {
                         )
                 }
                 Button(action: {
-                    MyPlanView()
+                    isFullScreenPresented = true
                 }) {
                     Text("100 day workout plan")
                         .frame(width: 350, height: 50)
@@ -61,6 +62,9 @@ struct ChoosePlanView: View {
                         )
                 }
             }
+        }
+        .fullScreenCover(isPresented: $isFullScreenPresented) {
+            MyPlanView()
         }
     }
 }
