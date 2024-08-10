@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChoosePlanView: View {
-    
+
     
     var body: some View {
         ZStack {
@@ -19,7 +19,7 @@ struct ChoosePlanView: View {
                     .font(.largeTitle)
                 
                 Button(action: {
-                    
+                    MyPlanView()
                 }) {
                     Text("7 day workout plan")
                         .frame(width: 350, height: 50)
@@ -33,7 +33,7 @@ struct ChoosePlanView: View {
                         )
                 }
                 Button(action: {
-                    
+                    MyPlanView()
                 }) {
                     Text("30 day workout plan")
                         .frame(width: 350, height: 50)
@@ -47,7 +47,7 @@ struct ChoosePlanView: View {
                         )
                 }
                 Button(action: {
-                    
+                    MyPlanView()
                 }) {
                     Text("100 day workout plan")
                         .frame(width: 350, height: 50)

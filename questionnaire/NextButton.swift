@@ -12,11 +12,17 @@ struct NextButton: View {
     @Binding var questionNumber: Int
     @Binding var selectedButtonIndex: Int?
     
+    @State private var isFullScreenPresented = false
+    
     var body: some View {
         VStack {
             Button(action: {
                 questionNumber += 1
                 selectedButtonIndex = nil
+                
+                if questionNumber == 6 {
+                    isFullScreenPresented = true
+                }
             }) {
                 Text("next")
                     .frame(width: 120, height: 45)
@@ -30,5 +36,10 @@ struct NextButton: View {
                     )
             }
         }
+        .fullScreenCover(isPresented: $isFullScreenPresented) {
+            ChoosePlanView()
+        }
     }
 }
+
+
