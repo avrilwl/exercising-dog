@@ -9,18 +9,14 @@ import SwiftUI
 
 struct MyPlanView: View {
     var body: some View {
-        Text("My plan (30 Days)")
+        Text("My plan (7 Days)")
             .bold()
             .font(.system(size: 36))
         ScrollView{
             VStack (alignment: .leading, spacing: 40) {
+              
                 Text("Day 1")
                     .bold()
-                    .italic()
-                    .underline()
-                    .foregroundStyle(.gray)
-                    .padding()
-                    .background(.white)
                     .font(.largeTitle)
                     .font(.system(size: 50))
                 Text("15 pushups- 30 seconds")
@@ -33,16 +29,15 @@ struct MyPlanView: View {
             }
             .frame(width: 300)
             .padding()
-            .background(.pink)
-            .cornerRadius(20)
+            .background(.yellow)
+            .cornerRadius(15)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.black, lineWidth: 3)
+                )
             VStack (alignment: .leading, spacing: 40) {
                 Text("Day 2")
                     .bold()
-                    .italic()
-                    .underline()
-                    .foregroundStyle(.gray)
-                    .padding()
-                    .background(.white)
                     .font(.largeTitle)
                     .font(.system(size: 50))
                 Text("20 squats")
@@ -53,18 +48,17 @@ struct MyPlanView: View {
                 Text("10 single leg squat")
                 
             }
-            .frame(width: 300)
+            .frame(width: 280)
             .padding()
             .background(.teal)
             .cornerRadius(20)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.black, lineWidth: 3)
+                )
             VStack (alignment: .leading, spacing: 40) {
                 Text("Day 3")
                     .bold()
-                    .italic()
-                    .underline()
-                    .foregroundStyle(.gray)
-                    .padding()
-                    .background(.white)
                     .font(.largeTitle)
                     .font(.system(size: 50))
                 Text("superman- 45 seconds")
@@ -77,41 +71,34 @@ struct MyPlanView: View {
                 Text("15 mountain climbers each side")
                 
             }
-            .frame(width: 300)
+            .frame(width: 280)
             .padding()
             .background(.green)
             .cornerRadius(20)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.black, lineWidth: 3)
+                )
             VStack (alignment: .leading, spacing: 40) {
                 Text("Day 4")
                     .bold()
-                    .italic()
-                    .underline()
-                    .foregroundStyle(.gray)
-                    .padding()
-                    .background(.white)
                     .font(.largeTitle)
                     .font(.system(size: 50))
-                Text("30 boxing squats")
-                Text("10 rocket jumps")
-                Text("15 side lunges")
-                Text("20 jumping jacks")
-                Text("40 butt kicks")
-                Text("20 lateral shuffles")
-                Text("30 high knees")
+                Text("REST DAY!!!")
+               
                 
             }
-            .frame(width: 300)
+            .frame(width: 280)
             .padding()
             .background(.mint)
             .cornerRadius(20)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.black, lineWidth: 3)
+                )
             VStack (alignment: .leading, spacing: 40) {
                 Text("Day 5")
                     .bold()
-                    .italic()
-                    .underline()
-                    .foregroundStyle(.gray)
-                    .padding()
-                    .background(.white)
                     .font(.largeTitle)
                     .font(.system(size: 50))
                 Text("15 pushups")
@@ -122,18 +109,17 @@ struct MyPlanView: View {
                 Text("15 side leg raises")
                 
             }
-            .frame(width: 300)
+            .frame(width: 280)
             .padding()
             .background(.gray)
             .cornerRadius(20)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.black, lineWidth: 3)
+                )
             VStack (alignment: .leading, spacing: 40) {
                 Text("Day 6")
                     .bold()
-                    .italic()
-                    .underline()
-                    .foregroundStyle(.gray)
-                    .padding()
-                    .background(.white)
                     .font(.largeTitle)
                     .font(.system(size: 50))
                 Text("superman 45 seconds")
@@ -144,33 +130,37 @@ struct MyPlanView: View {
                 Text("15 side lunges")
                 
             }
-            .frame(width: 300)
+            .frame(width: 280)
             .padding()
             .background(.blue)
             .cornerRadius(20)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.black, lineWidth: 3)
+                )
             VStack (alignment: .leading, spacing: 40) {
                 Text("Day 7")
                     .bold()
-                    .italic()
-                    .underline()
-                    .foregroundStyle(.gray)
-                    .padding()
-                    .background(.white)
                     .font(.largeTitle)
                     .font(.system(size: 50))
                 Text("REST DAY!!!")
                
                 
             }
-            .frame(width: 300)
+            .frame(width: 280)
             .padding()
             .background(.red)
             .cornerRadius(20)
+            .overlay(
+                RoundedRectangle(cornerRadius: 20)
+                    .stroke(Color.black, lineWidth: 3)
+                )
            
             
         }
-      
+       
     }
+      
 }
 
 

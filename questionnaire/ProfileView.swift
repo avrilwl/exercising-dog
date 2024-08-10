@@ -14,81 +14,75 @@ struct ProfileView: View {
     @State private var yourAge: String = ""
     @State private var yourHeight: String = ""
     @State private var yourWeight: String = ""
-
-
+    
+    
     var body: some View {
-        VStack {
-//            TextField(
-//                "Enter your name",
-//                text: $GivenName
-//
-//            )
-//        
-//            Spacer()
-//            .disableAutocorrection(true)
-//            TextField(
-//                "Enter your age",
-//                text: $yourAge
-//                
-//            )
-//            Spacer()
-//            .disableAutocorrection(true)
-//            TextField(
-//                "Enter your height",
-//                text: $yourHeight
-//            )
-            TextField("Your Name", text: self.$GivenName)
-                .frame(height: 55)
-                   .textFieldStyle(PlainTextFieldStyle())
-                   .padding([.horizontal], 4)
-                   .cornerRadius(16)
-                   .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
-                   .padding([.horizontal], 24)
-            .disableAutocorrection(true)
-            Spacer()
-            TextField("Your Height", text: self.$yourHeight)
-                .frame(height: 55)
-                   .textFieldStyle(PlainTextFieldStyle())
-                   .padding([.horizontal], 4)
-                   .cornerRadius(16)
-                   .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
-                   .padding([.horizontal], 24)
-            .disableAutocorrection(true)
-            Spacer()
-            TextField("Your weight", text: self.$yourWeight)
-                .frame(height: 55)
-                   .textFieldStyle(PlainTextFieldStyle())
-                   .padding([.horizontal], 4)
-                   .cornerRadius(16)
-                   .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
-                   .padding([.horizontal], 24)
-            .disableAutocorrection(true)
-            Spacer()
-            TextField("Your age", text: self.$yourAge)
-                .frame(height: 55)
-                   .textFieldStyle(PlainTextFieldStyle())
-                   .padding([.horizontal], 4)
-                   .cornerRadius(16)
-                   .overlay(RoundedRectangle(cornerRadius: 16).stroke(Color.gray))
-                   .padding([.horizontal], 24)
-            .disableAutocorrection(true)
-            Spacer()
-//            Spacer()
-//            TextField(
-//                "Enter your weight",
-//                text: $yourWeight
-//            )
-//            .disableAutocorrection(true)
-//            Spacer()
+        ZStack {
+            Color.yellow
+                .ignoresSafeArea()
+            
+            VStack {
+                Text("Your profile")
+                    .bold()
+                    .font(.system(size: 36))
+                
+              
+                TextField("Enter your name", text: $GivenName)
+                    .padding(40)
+                    .background(Color.clear)
+                    .border(Color.clear)
+                    .textFieldStyle(PlainTextFieldStyle())
+                //                .font(.body)
+                    .font(.system(size: 30))
+                
+                TextField("How old are you?", text: $yourAge)
+                    .padding(40)
+                    .background(Color.clear)
+                    .border(Color.clear)
+                    .textFieldStyle(PlainTextFieldStyle())
+                //                .font(.body)
+                    .font(.system(size: 30))
+                TextField("How tall are you?", text: $yourHeight)
+                    .padding(40)
+                    .background(Color.clear)
+                    .border(Color.clear)
+                    .textFieldStyle(PlainTextFieldStyle())
+                //                .font(.body)
+                    .font(.system(size: 30))
+                TextField("What's your weight?", text: $yourWeight)
+                    .padding(40)
+                    .background(Color.clear)
+                    .border(Color.clear)
+                    .textFieldStyle(PlainTextFieldStyle())
+                //                .font(.body)
+                    .font(.system(size: 30))
+                
+                Button(action: {
+                    
+                }) {
+                    Text("Done!")
+                        .frame(width: 120, height: 45)
+                        .font(.system(size: 30))
+                        .foregroundColor(.black)
+                        .background(Color.blue)
+                        .cornerRadius(10)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.black, lineWidth: 3)
+                        )
+                }
+                
+            }
+            .textFieldStyle(.roundedBorder)
+            
+            
         }
-        .textFieldStyle(.roundedBorder)
+        
         
     }
-
     
+}
+    #Preview {
+        ProfileView()
     }
 
-
-#Preview {
-    ProfileView()
-}
