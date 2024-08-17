@@ -13,9 +13,23 @@ struct MyPlanView: View {
             Color.yellow
                 .ignoresSafeArea()
             VStack {
+                Button(action: {
+                    
+                }, label: {
+                    Image(systemName: "chevron.backward")
+                        .foregroundColor(.black)
+                    Text("Back")
+                        .font(.system(size: 20))
+                        .foregroundColor(.black)
+                        
+                }).padding()
+                .frame(maxWidth: .infinity, alignment: .leading)
+                
                 Text("My plan (7 Days)")
                     .bold()
                     .font(.system(size: 36))
+                
+                
                 ScrollView{
                     VStack (alignment: .leading, spacing: 40) {
                         
@@ -31,7 +45,7 @@ struct MyPlanView: View {
                         Text("30 plank ups - 1 minute 15 seconds")
                         
                     }
-                    .frame(width: 300)
+                    .frame(width: 280)
                     .padding()
                     .background(.red)
                     .cornerRadius(20)
@@ -151,6 +165,7 @@ struct MyPlanView: View {
                         
                         
                     }
+                    
                     .frame(width: 280)
                     .padding()
                     .background(.pink)
@@ -159,7 +174,6 @@ struct MyPlanView: View {
                         RoundedRectangle(cornerRadius: 20)
                             .stroke(Color.black, lineWidth: 3)
                     )
-                    
                     
                 }
                 
