@@ -10,18 +10,42 @@ import SwiftUI
 struct SummaryView: View {
     
     let exercises: [Exercise] = Exercises
+    @State private var isFullScreenPresented = false
     
     var body: some View {
-        NavigationStack {
-            List(exercises) { exercise in
-                NavigationLink(destination: ExerciseDetailsView(exercise: exercise)) {
-                    Text(exercise.name)
+        ZStack {
+            VStack {
+                NavigationStack {
+                    List(exercises) { exercise in
+                        NavigationLink(destination: ExerciseDetailsView(exercise: exercise)) {
+                            Text(exercise.name)
+                        }
+                    }
+                    .navigationTitle("Summary")
                 }
             }
-            .navigationTitle("Summary")
+            Button(action: {
+                
+                isFullScreenPresented = true
+                
+            }) {
+                Text("done")
+                    .frame(width: 120, height: 45)
+                    .font(.system(size: 30))
+                    .foregroundColor(.black)
+                    .background(Color.blue)
+                    .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.black, lineWidth: 3)
+                    )
+            }
         }
     }
 }
+
+
+
 
 
 #Preview {

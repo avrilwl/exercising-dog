@@ -37,7 +37,7 @@ struct MyPlanView: View {
                             .bold()
                             .font(.largeTitle)
                             .font(.system(size: 50))
-                        Text("Knee pushups - 1 minute")
+                        Text("Pushups - 1 minute")
                         Text("Side plank - 1 minute")
                         Text("Burpees - 1 minute")
                         Text("Plank shoulder taps - 1 minute")

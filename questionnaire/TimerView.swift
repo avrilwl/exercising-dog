@@ -24,12 +24,16 @@ struct TimerView: View {
                     startTimer()
                 }
             }) {
-                Text(isRunning ? "Finsh the workout before the time ends" : "Start")
+                Text(isRunning ? "Do the workout until the timer ends" : "Start")
                     .font(.title)
                     .padding()
-                    .background(isRunning ? Color.gray : Color.blue)
-                    .foregroundColor(.white)
+                    .background(isRunning ? Color.white : Color.blue)
+                    .foregroundColor(.black)
                     .cornerRadius(10)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.black, lineWidth: 3)
+                        )
             }
             .disabled(isRunning)
             
@@ -40,7 +44,7 @@ struct TimerView: View {
     
     func startTimer() {
         isRunning = true
-        timeRemaining = 60 // Reset time to 60 seconds
+        timeRemaining = 60
         
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { _ in
             if timeRemaining > 0 {

@@ -8,25 +8,17 @@
 import SwiftUI
 
 let exercises = [
-    Exercisess(name: "Jumping Jacks"),
+    Exercisess(name: "Push ups"),
     Exercisess(name: "Rest"),
-    Exercisess(name: "Push-Ups"),
-    Exercisess(name: "Rest"),
-    Exercisess(name: "Bodyweight Squats"),
-    Exercisess(name: "Rest"),
-    Exercisess(name: "Mountain Climbers"),
-    Exercisess(name: "Rest"),
-    Exercisess(name: "Plank"),
-    Exercisess(name: "Rest"),
-    Exercisess(name: "Lunges"),
-    Exercisess(name: "Rest"),
-    Exercisess(name: "High Knees"),
+    Exercisess(name: "Side plank"),
     Exercisess(name: "Rest"),
     Exercisess(name: "Burpees"),
     Exercisess(name: "Rest"),
-    Exercisess(name: "Bicycle Crunches"),
+    Exercisess(name: "Plank shoulder taps"),
     Exercisess(name: "Rest"),
-    Exercisess(name: "Tricep Dips")
+    Exercisess(name: "High plank"),
+    Exercisess(name: "Rest"),
+    Exercisess(name: "Plank ups")
 ]
 
 
@@ -36,9 +28,10 @@ struct WorkoutView: View {
     @State private var timeRemaining = 60
     @State private var timer: Timer? = nil
     @State private var isActive = false
+    @State private var isFullScreenPresented = false
     
     var body: some View {
-        ZStack{
+        ZStack {
             LinearGradient(gradient: Gradient(colors: [.red, .purple]), startPoint: .top, endPoint: .bottom)
                 .edgesIgnoringSafeArea(.all)
             VStack {
@@ -58,7 +51,7 @@ struct WorkoutView: View {
                             .overlay(
                                 RoundedRectangle(cornerRadius: 10)
                                     .stroke(Color.black, lineWidth: 3)
-                                )
+                            )
                         
                     }
                     
@@ -69,16 +62,18 @@ struct WorkoutView: View {
                 }
             }
         }
-            .onAppear {
-                startTimer()
-            }
-            .onDisappear {
-                timer?.invalidate()
-            }
+        .onAppear {
+            startTimer()
         }
+        .onDisappear {
+            timer?.invalidate()
+        }
+        .fullScreenCover(isPresented: $isFullScreenPresented) {
+            SummaryView()
+        }
+    }
         
-        
-        private func startTimer() {
+        func startTimer() {
             if timer != nil {
                 timer?.invalidate()
                 timer = nil
@@ -95,22 +90,25 @@ struct WorkoutView: View {
                 } else {
                     timer?.invalidate()
                     isActive = false
-                    
-                    
-                    
+
                 }
             }
         }
         
-        private func nextExercise() {
+        
+        func nextExercise() {
             if currentExerciseIndex < exercises.count - 1 {
                 currentExerciseIndex += 1
                 timeRemaining = 60
                 startTimer()
             }
+            else if currentExerciseIndex == 10 {
+                isFullScreenPresented = true
+            }
         }
-    
-    }
+}
+
+
 
 #Preview {
     WorkoutView()
