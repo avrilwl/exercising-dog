@@ -25,9 +25,7 @@ struct SummaryView: View {
                 }
             }
             Button(action: {
-                
                 isFullScreenPresented = true
-                
             }) {
                 Text("done")
                     .frame(width: 120, height: 45)
@@ -40,6 +38,7 @@ struct SummaryView: View {
                             .stroke(Color.black, lineWidth: 3)
                     )
             }
+            .frame (maxHeight: .infinity, alignment: .bottom)
         }
         .fullScreenCover(isPresented: $isFullScreenPresented) {
             AfterHomePageView()

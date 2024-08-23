@@ -24,7 +24,7 @@ struct HomePageView: View {
                         Button{
                         } label: {
                             Text("my plan")
-                                .font(.system(size: 30))
+                                .font(.system(size: 25))
                                 .padding()
                                 .background(.yellow)
                                 .foregroundColor(.black)
@@ -39,7 +39,7 @@ struct HomePageView: View {
                             isFullScreenPresented = true
                         }) {
                             Text("profile")
-                                .font(.system(size: 30))
+                                .font(.system(size: 25))
                                 .padding()
                                 .background(.yellow)
                                 .foregroundColor(.black)

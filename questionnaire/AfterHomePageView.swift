@@ -18,7 +18,7 @@ struct AfterHomePageView: View {
                             Button{
                             } label: {
                                 Text("my plan")
-                                    .font(.system(size: 30))
+                                    .font(.system(size: 25))
                                     .padding()
                                     .background(.yellow)
                                     .foregroundColor(.black)
@@ -32,7 +32,7 @@ struct AfterHomePageView: View {
                             Button{
                             } label: {
                                 Text("profile")
-                                    .font(.system(size: 30))
+                                    .font(.system(size: 25))
                                     .padding()
                                     .background(.yellow)
                                     .foregroundColor(.black)

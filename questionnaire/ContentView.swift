@@ -24,7 +24,7 @@ struct ContentView: View {
                             isFullScreenPresented = true
                         }) {
                             Text("take the quiz to get a FREE personalised plan")
-                                .font(.system(size: 30))
+                                .font(.system(size: 20))
                                 .padding()
                                 .background(.yellow)
                                 .foregroundColor(.black)
@@ -39,7 +39,7 @@ struct ContentView: View {
                             
                         }) {
                             Text("profile")
-                                .font(.system(size: 30))
+                                .font(.system(size: 25))
                                 .padding()
                                 .background(.yellow)
                                 .foregroundColor(.black)
