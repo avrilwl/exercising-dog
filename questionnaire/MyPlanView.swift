@@ -38,11 +38,11 @@ struct MyPlanView: View {
                             .font(.largeTitle)
                             .font(.system(size: 50))
                         Text("Pushups - 1 minute")
-                        Text("Side plank - 1 minute")
                         Text("Burpees - 1 minute")
                         Text("Plank shoulder taps - 1 minute")
                         Text("high plank - 1 minute")
                         Text("plank ups - 1 minute")
+                        Text("Side plank - 1 minute")
                         
                     }
                     .frame(width: 280)

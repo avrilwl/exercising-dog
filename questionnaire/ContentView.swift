@@ -8,16 +8,89 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var streakno = 0
+    @State private var name = "name"
+    @State private var excercisetype = "wtv exercise"
+    @State private var isFullScreenPresented = false
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        ZStack {
+            Color.blue.ignoresSafeArea()
+            VStack{
+                HStack{
+                    VStack (alignment:.leading){
+                        Button{
+                        } label: {
+                            Text("take the quiz to get a FREE personalised plan")
+                                .font(.system(size: 30))
+                                .padding()
+                                .background(.yellow)
+                                .foregroundColor(.black)
+                                .cornerRadius(15)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .stroke(.black, lineWidth: 3)
+                                )
+                        }
+                        
+                        Button(action: {
+                            isFullScreenPresented = true
+                        }) {
+                            Text("profile")
+                                .font(.system(size: 30))
+                                .padding()
+                                .background(.yellow)
+                                .foregroundColor(.black)
+                                .cornerRadius(15)
+                                .overlay(
+                                    RoundedRectangle(cornerRadius: 15)
+                                        .stroke(.black, lineWidth: 3)
+                                )
+                            
+                        }
+                    }
+                    
+                    Spacer()
+                    
+                    HStack{
+                        Text("🔥")
+                            .font(.system(size: 40))
+                        Text("\(streakno)")
+                            .font(.system(size: 30))
+                    }
+                }
+                .padding()
+                Text("\(name) is unfit, go exercise!")
+                    .font(.system(size: 20))
+                Spacer()
+                Text("it's upper body day!")
+                    .font(.system(size: 20))
+                Button{
+                } label: {
+                    Text("start today's workout")
+                        .font(.system(size: 30))
+                        .padding()
+                        .background(.yellow)
+                        .foregroundColor(.black)
+                        .cornerRadius(15)
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 15)
+                                .stroke(.black, lineWidth: 3)
+                        )
+                }
+                
+                
+                
+            }
+            
         }
-        .padding()
+        .fullScreenCover(isPresented: $isFullScreenPresented) {
+            ProfileView()
+        }
     }
 }
+
 
 #Preview {
     ContentView()

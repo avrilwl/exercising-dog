@@ -41,6 +41,9 @@ struct SummaryView: View {
                     )
             }
         }
+        .fullScreenCover(isPresented: $isFullScreenPresented) {
+            AfterHomePageView()
+        }
     }
 }
 

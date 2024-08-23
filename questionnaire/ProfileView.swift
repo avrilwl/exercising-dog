@@ -8,13 +8,13 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @State private var name: String = ""
     
+    @State private var name: String = ""
     @State private var GivenName: String = ""
     @State private var yourAge: String = ""
     @State private var yourHeight: String = ""
     @State private var yourWeight: String = ""
-    
+    @State private var isFullScreenPresented = false
     
     var body: some View {
         ZStack {
@@ -58,9 +58,9 @@ struct ProfileView: View {
                     .font(.system(size: 30))
                 
                 Button(action: {
-                    
+                    isFullScreenPresented = true
                 }) {
-                    Text("Done!")
+                    Text("done")
                         .frame(width: 120, height: 45)
                         .font(.system(size: 30))
                         .foregroundColor(.black)
@@ -77,7 +77,9 @@ struct ProfileView: View {
             
             
         }
-        
+        .fullScreenCover(isPresented: $isFullScreenPresented) {
+            HomePageView()
+        }
         
     }
     
