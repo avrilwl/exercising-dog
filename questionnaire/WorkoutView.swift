@@ -10,15 +10,15 @@ import SwiftUI
 let exercises = [
     Exercisess(name: "Push ups"),
     Exercisess(name: "Rest"),
-    Exercisess(name: "Side plank"),
-    Exercisess(name: "Rest"),
     Exercisess(name: "Burpees"),
     Exercisess(name: "Rest"),
     Exercisess(name: "Plank shoulder taps"),
     Exercisess(name: "Rest"),
     Exercisess(name: "High plank"),
     Exercisess(name: "Rest"),
-    Exercisess(name: "Plank ups")
+    Exercisess(name: "Plank ups"),
+    Exercisess(name: "Rest"),
+    Exercisess(name: "Side plank")
 ]
 
 
