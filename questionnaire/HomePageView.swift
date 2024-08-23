@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct HomePageView: View {
+    
     @State private var streakno = 0
     @State private var name = "name"
     @State private var excercisetype = "wtv exercise"
+    @State private var isFullScreenPresented = false
+    @State private var isMooScreenPresented = false
+    
     var body: some View {
         ZStack {
             Color.blue.ignoresSafeArea()
@@ -31,8 +35,9 @@ struct HomePageView: View {
                                 )
                         }
                         
-                        Button{
-                        } label: {
+                        Button (action: {
+                            isFullScreenPresented = true
+                        }) {
                             Text("profile")
                                 .font(.system(size: 30))
                                 .padding()
@@ -62,8 +67,9 @@ struct HomePageView: View {
                 Spacer()
                 Text("It's upper body day!")
                     .font(.system(size: 20))
-                Button{
-                } label: {
+                Button (action: {
+                    isMooScreenPresented = true
+                }) {
                     Text("start today's workout")
                         .font(.system(size: 30))
                         .padding()
@@ -81,7 +87,12 @@ struct HomePageView: View {
             }
             
         }
-        
+        .fullScreenCover(isPresented: $isFullScreenPresented) {
+            ProfileView()
+        }
+        .fullScreenCover(isPresented: $isMooScreenPresented) {
+            WorkoutView()
+        }
     }
 }
 

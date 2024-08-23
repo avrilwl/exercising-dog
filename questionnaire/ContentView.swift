@@ -20,8 +20,9 @@ struct ContentView: View {
             VStack{
                 HStack{
                     VStack (alignment:.leading){
-                        Button{
-                        } label: {
+                        Button (action: {
+                            isFullScreenPresented = true
+                        }) {
                             Text("take the quiz to get a FREE personalised plan")
                                 .font(.system(size: 30))
                                 .padding()
@@ -35,7 +36,7 @@ struct ContentView: View {
                         }
                         
                         Button(action: {
-                            isFullScreenPresented = true
+                            
                         }) {
                             Text("profile")
                                 .font(.system(size: 30))
@@ -86,7 +87,7 @@ struct ContentView: View {
             
         }
         .fullScreenCover(isPresented: $isFullScreenPresented) {
-            ProfileView()
+            QuestionnaireView()
         }
     }
 }

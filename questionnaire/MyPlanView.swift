@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct MyPlanView: View {
+    
+    @State private var isFullScreenPresented = false
+    
     var body: some View {
         ZStack {
             Color.yellow
                 .ignoresSafeArea()
             VStack {
                 Button(action: {
-                    
+                    isFullScreenPresented = true
                 }, label: {
                     Image(systemName: "chevron.backward")
                         .foregroundColor(.black)
@@ -179,6 +182,9 @@ struct MyPlanView: View {
                 
             }
             
+        }
+        .fullScreenCover(isPresented: $isFullScreenPresented) {
+            HomePageView()
         }
     }
 }
