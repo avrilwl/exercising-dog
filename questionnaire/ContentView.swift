@@ -13,6 +13,7 @@ struct ContentView: View {
     @State private var name = "name"
     @State private var excercisetype = "wtv exercise"
     @State private var isFullScreenPresented = false
+    @State private var isMooScreenPresented = false
     
     var body: some View {
         ZStack {
@@ -21,7 +22,7 @@ struct ContentView: View {
                 HStack{
                     VStack (alignment:.leading){
                         Button (action: {
-                            isFullScreenPresented = true
+                            isMooScreenPresented = true
                         }) {
                             Text("take the quiz to get a FREE personalised plan")
                                 .font(.system(size: 20))
@@ -36,7 +37,7 @@ struct ContentView: View {
                         }
                         
                         Button(action: {
-                            
+                            isFullScreenPresented = true
                         }) {
                             Text("profile")
                                 .font(.system(size: 25))
@@ -87,7 +88,10 @@ struct ContentView: View {
             
         }
         .fullScreenCover(isPresented: $isFullScreenPresented) {
-            QuestionnaireView()
+            ProfileView()
+        }
+        .fullScreenCover(isPresented: $isMooScreenPresented) {
+            HomePageView()
         }
     }
 }

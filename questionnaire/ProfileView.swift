@@ -78,7 +78,7 @@ struct ProfileView: View {
             
         }
         .fullScreenCover(isPresented: $isFullScreenPresented) {
-            HomePageView()
+            ContentView()
         }
         
     }

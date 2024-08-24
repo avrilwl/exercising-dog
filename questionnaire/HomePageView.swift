@@ -13,7 +13,6 @@ struct HomePageView: View {
     @State private var name = "name"
     @State private var excercisetype = "wtv exercise"
     @State private var isFullScreenPresented = false
-    @State private var isMooScreenPresented = false
     
     var body: some View {
         ZStack {
@@ -21,8 +20,9 @@ struct HomePageView: View {
             VStack{
                 HStack{
                     VStack (alignment:.leading){
-                        Button{
-                        } label: {
+                        Button (action: {
+                            
+                        }) {
                             Text("my plan")
                                 .font(.system(size: 25))
                                 .padding()
@@ -36,7 +36,7 @@ struct HomePageView: View {
                         }
                         
                         Button (action: {
-                            isFullScreenPresented = true
+                            
                         }) {
                             Text("profile")
                                 .font(.system(size: 25))
@@ -68,7 +68,7 @@ struct HomePageView: View {
                 Text("It's upper body day!")
                     .font(.system(size: 20))
                 Button (action: {
-                    isMooScreenPresented = true
+                    isFullScreenPresented = true
                 }) {
                     Text("start today's workout")
                         .font(.system(size: 30))
@@ -88,11 +88,9 @@ struct HomePageView: View {
             
         }
         .fullScreenCover(isPresented: $isFullScreenPresented) {
-            ProfileView()
-        }
-        .fullScreenCover(isPresented: $isMooScreenPresented) {
             WorkoutView()
         }
+        
     }
 }
 
