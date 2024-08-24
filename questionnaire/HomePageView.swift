@@ -65,6 +65,9 @@ struct HomePageView: View {
                 Text("ching is unfit, go exercise!")
                     .font(.system(size: 20))
                 Spacer()
+                Image("Fat dog")
+                    .resizable()
+                    .frame(width: 400, height: 400)
                 Text("It's upper body day!")
                     .font(.system(size: 20))
                 Button (action: {
